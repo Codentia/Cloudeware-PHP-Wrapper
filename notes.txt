@@ -1,0 +1,30 @@
+1. To use in .html, server needs to be configured to run html as php - this can be set up in htaccess by adding the handler (we may need to automate this for users)
+
+
+Need a way for 'core' to report it's version, so that we know when an upgrade is needed
+cos e.g if we add new type of section
+core script will have to be updated
+and we want to semi-automate that
+it also has to know e.g
+you are on 1.1 latest is 2.7
+is a) upgrade REQUIRED
+b) is it compatible or do you need to redo your snippets
+could send an md5 up to ensure script is valid
+
+im thinking it should include an md5 in the call
+so its md5(of version# + script details), partskey
+and if the md5 isnt valid we know they've either been compromised
+or tried to edit the script
+etc
+
+
+parts install as part of rig?
+
+add proper file headers
+
+test files which cloudeware can use to prove php is working (htm, php - test for addheader in htaccess)
+
+
+http://maxmorgandesign.com/simple_php_auto_update_system/
+
+md5 might not be ideal for updates - maybe crc32 as no risk of collision
